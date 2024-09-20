@@ -1,0 +1,194 @@
+@media screen and (min-width: 400px) {
+  /* titre et bloc main à gauche */
+  body > header,
+  main {
+    display: block;
+    float: left;
+    width: 73%; /* 750px/1026px */
+  }
+
+  /* bloc photo + adresse  et divers */
+  #civil,
+  #divers {
+    float: right;
+    width: 24%; /*250px/1026 ;*/
+    background-color: blue;
+    color: white;
+    padding: 0.5em 0.8%; /*8px/16px 8px/1026px;*/
+  }
+
+  /* photo identité */
+  #civil > img {
+    display: block;
+    width: 95%;
+    margin: auto;
+    border: 3px solid white;
+    border-radius: 5px;
+  }
+
+  /* pas de triangles pour détails à la demande */
+  #expe h1 > img,
+  #divers h2 > img {
+    display: none;
+  }
+}
+
+/* grand écran */
+@media screen and (min-width: 1050px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* écran std */
+@media screen and (min-width: 640px) and (max-width: 1049px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* petit écran et tablettes */
+@media screen and (min-width: 400px) and (max-width: 639px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen{
+  html, body{
+      /*width:1050px; /* base de test et de mesures */
+      margin: .75em 1% ;/* 12px/16px 12px/1050px  */	
+      font-family:Arial, Helvetica, sans-serif;
+      /* font-size : 16px;  /* pour test ==> défini dans chaque media query */
+  }
+
+.modal> img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+  /* titre */
+  body>header{
+      font-size: 2em;
+      font-weight: bold;
+      color: blue;
+      margin-bottom: 1em ; /*50px/3em;*/
+      text-align: center;
+
+  }
+  div>h1{text-align: center;}
+
+  /* titres du bloc main */
+  #etude>header, #expe>header {
+      font-size: 1.4em; /* 32 px */
+      margin: 0.5em  0px; /* 20px/32px */
+      padding : 0.5% ; /*5px/706px */ 
+      font-weight: bold;
+      color: white;
+      background-color: blue;
+
+  }
+
+  /* diplômes */
+  #etude table th {
+      text-align: left;
+      font-size: 1.2em;
+  }
+  /* espaces entre 2 etudes */
+  #etude table tr:nth-child(2n) td {
+      padding-bottom: 1em; /* 16px */
+  }
+
+  
+  /* bloc photo + adresse  et divers */
+/* DEPLACE DANS LE fichier cvpc.css
+  #civil, #divers {
+      float:right;
+      width: 24%;
+      background-color: blue;
+      color:white;
+      padding: .5em  0.8% ;
+  }
+*/
+  /* pas de triangles pour détails à la demande */
+/* DEPLACE DANS LE fichier cvpc.css
+  #expe h1>img, #divers h2>img {
+      display:none;
+  }
+*/
+  /* CIVIL     ------------------------------------- */
+  /* photo identité */
+  #civil>img {
+      display: block;
+      width:95%;
+      margin:auto;
+      border: 3px solid white;
+      border-radius: 5px;
+  }
+  
+  /* adresse de la personne */
+  #civil p {
+      margin: 0.3em 0px; /* 5px/16px 0px; */
+  }
+
+
+  /* EXPERIENCE ------------------------------------- */
+  /* énum en expériences prof */
+  #expe h1 {
+      font-size: 1.1em;
+      background-color: #11b7ee;
+      font-weight: normal;
+  }
+
+   #expe1 {
+      font-size: 1.2em;
+      background-color: #92e0fa9f;
+      font-weight: normal;
+  }
+
+  /* séparation en 2 parties de l'expé prof */
+  #expe h1 span:first-of-type{
+      display: inline-block; /* nécessaire pour dimensionner */
+      word-wrap: break-word;
+      width:28%;	/* espacer les 2 parties */
+  }
+  
+  #expe ul {
+      margin-left : 13%; /*100px/750px;*/
+  }
+  
+  /* DIVERS ----------------------------------------- */
+  /* titres et enum en divers */ 
+  #divers>h2 {
+      background-color: white;
+      color : blue;
+      padding : 2% ; /*5px/234px */
+  }
+
+  #divers ul {
+      list-style: none;
+      padding-left : 0px;
+  }
+
+  #c1 {background-color: #11b7ee;  width:100%; }
+
+  #c2 {width:18%;}
+
+  #imagediv {
+      display:block; /* On change l'affichage de <a> pour qu'il se comporte comme un <div> */
+      position:fixed; /* On le positionne par rapport à la page */
+      left:20%; /* On le décolle du bord gauche */
+      top:20%; /* On le décolle du bord haut */
+
+
+  }
+  #imagediv img {
+  border:5px solid #00FF00; /* On met une marge autour de l'image pour qu'on la différencie bien du reste de la page */
+  width:60%; 
+
+  }
+  img {
+      width:20px; 
+  }

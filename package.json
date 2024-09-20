@@ -1,0 +1,13 @@
+function Agrandissement(img) {
+  var image_div = document.getElementById('imagediv'); // Le bloc qui contiendra la grande image
+  var image = document.getElementById('image'); // L'image elle-même
+  if(image_div && image) { // Si les deux existent
+        if(img) { // Si on a une adresse en argument
+                image.src = img; // On change la source de notre image
+                image_div.style.display = 'block'; // On affiche le bloc
+          } else { // Sinon...
+                image_div.style.display = 'none'; // On ferme le bloc
+                //image.src = 'imagcv/ba.jpg'; // On met notre image par défaut
+          }
+    }
+}
